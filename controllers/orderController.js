@@ -7,7 +7,7 @@ import Product from "../model/product.js";
 import Stripe from "stripe";
 import Coupon from "../model/coupon.js";
 // STRIPE INSTANCE
-const stripe = new Stripe(process.env.STRIPE_API_kEY);
+const stripe = new Stripe(process.env.STRIPE_API_KEY);
 
 // @DESC CREATE ORDERS
 // @ROUTE POST api/v1/orders

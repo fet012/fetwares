@@ -20,7 +20,7 @@ dbConnect();
 
 // STRIPE WEBHOOK
 // STRIPE INSTANCE
-const stripe = new Stripe(process.env.STRIPE_KEY);
+const stripe = new Stripe(process.env.STRIPE_API_KEY);
 const endpointSecret =
   " whsec_b781eb7b794807eb9186e334b708c7e8a71b2a5d88154f795ddb47049647ca2e";
 
