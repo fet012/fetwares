@@ -12,12 +12,20 @@ import orderRouter from "../routes/orderRoute.js";
 import Stripe from "stripe";
 import Order from "../model/order.js";
 import couponsRouter from "../routes/couponsRoutes.js";
+import cors from "cors";
 dotenv.config();
 const app = express();
 
 // dbConnect()
 dbConnect();
-
+app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
 // STRIPE WEBHOOK
 // STRIPE INSTANCE
 const stripe = new Stripe(process.env.STRIPE_API_KEY);

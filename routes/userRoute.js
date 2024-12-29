@@ -10,7 +10,7 @@ import { isLoggedIn } from "../middlewares/isLogin.js";
 const userRoutes = express.Router();
 
 userRoutes.post("/register", registeredUserCtrl);
-userRoutes.get("/login", loginUser);
+userRoutes.post("/login", loginUser);
 userRoutes.get("/profile", isLoggedIn, getUserProfile);
 userRoutes.put("/update/shipping", isLoggedIn, updateShippingAddress);
 
